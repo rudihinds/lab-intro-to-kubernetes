@@ -5,7 +5,7 @@ def github_id = 'rudihinds'
 // vvv DO NOT EDIT THE VARIABLES BETWEEN THESE MARKERS vvv //
 
 def git_commit     = ''
-def git_repository = 'https://github.com/${github_id}/lab-intro-to-kubernetes.git'
+def git_repository = 'https://github.com/rudihinds/lab-intro-to-kubernetes.git'
 def namespace      = github_id.toLowerCase()
 def image_name     = 'sepractices/${namespace}-lab-intro-to-kubernetes'
 def kaniko_image   = 'gcr.io/kaniko-project/executor:debug-539ddefcae3fd6b411a95982a830d987f4214251'
