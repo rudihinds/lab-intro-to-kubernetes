@@ -97,9 +97,9 @@ podTemplate(name: 'kaniko', label: label, yaml: pod_yaml) {
         file(credentialsId: 'KUBERNETES_CA', variable: 'KUBERNETES_CA')
       ]) {
         container(name: 'kubectl', shell: '/bin/sh',) {
-          sh '''
+          sh """
             kubectl config set-credentials aws --exec-arg=token --exec-arg=-i --exec-arg="${cluster_name}"
-          '''
+          """
           sh '''
             kubectl config \
               set-cluster kubernetes \
